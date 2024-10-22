@@ -1,0 +1,102 @@
+$accent-color: #151515;
+
+$container-width: 960px;
+
+@mixin container {
+    max-width: $container-width;
+    margin: 0 auto;
+  }
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+body {
+  width: 1024;
+
+  background: #f0f0f0;
+}
+
+.header {
+  @include container;
+
+  display: flex;
+  align-items: center;
+  height: 120px;
+  gap: 10px;
+  justify-content: space-between;
+
+  &__auth {
+    display: flex;
+    gap: 10px;
+  }
+  &__nav {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-right: auto;
+
+    &__link {
+      color: #151515;
+      text-decoration: none;
+      font-size: 18px;
+    }
+  }
+}
+.button {
+  font-size: 18px;
+  padding: 14px 20px;
+  border: none;
+  background: $accent-color;
+  color: #fff;
+  white-space: nowrap;
+
+  &--white {
+    background: #fff;
+
+    color: $accent-color;
+  }
+}
+
+.hero {
+  @include container;
+
+  display: flex;
+  gap: 90px;
+
+  &-info {
+    margin-top: 90px;
+
+    &__email {
+      display: flex;
+      width: 505px;
+      margin-top: 40px;
+    }
+
+    &__pay {
+      margin-top: 80px;
+      display: flex;
+      gap: 28px;
+    }
+
+    &__title {
+      font-size: 70px;
+      font-weight: 500;
+    }
+    &__discripcion {
+      font-size: 18px;
+      width: 565px;
+      margin-top: 20px;
+    }
+  }
+}
+.input {
+  padding: 14px 16px;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+}
